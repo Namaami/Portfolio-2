@@ -1,203 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namaami Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namaami Portfolio</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Boxicons -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
 </head>
 
 <body>
+  <!-- Starry background -->
+  <div id="stars-container"></div>
 
-    <div id="stars-container"></div>
+  <!-- HEADER -->
+  <header class="header" data-aos="fade-down">
+    <div class="header-container-1">
+      <h1 class="logo"><span>na</span>maami<span class="logo-s">.</span></h1>
 
-    <header class="header">
-        <div class="header-container-1">
-            <h1 class="logo"><span>na</span>maami<span class="logo-s">.</span></h1>
-            <nav class="nav-list">
-                <ul class="ul-list">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#designer-coder">Tech Stack</a></li>
-                </ul>
-            </nav>
-            <div class="box-icons">
-                <p><a href="https://www.youtube.com/@yourchannel" target="_blank"><i class='bx bxl-youtube'></i></a></p>
-                <p><a href="https://github.com/Namaami" target="_blank"><i class='bx bxl-github'></i></a></p>
-                <p><a href="https://www.linkedin.com/in/namaami-mishra-619831295/" target="_blank"><i class='bx bxl-linkedin-square'></i></a></p>
-            </div>
+      <nav class="nav-list">
+        <ul class="ul-list">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#designer-coder">Tech Stack</a></li>
+        </ul>
+      </nav>
+
+      <div class="box-icons">
+        <p>
+          <a href="https://www.youtube.com/@yourchannel" target="_blank"
+            ><i class="bx bxl-youtube"></i
+          ></a>
+        </p>
+        <p>
+          <a href="https://github.com/Namaami" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/namaami-mishra-619831295/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section class="home" id="home">
+    <div class="container-home" data-aos="fade-up">
+      <img class="avatar" src="images/img.png" alt="avatar" />
+      <div class="text-home">
+        <h4>Hi I'm Namaami!!</h4>
+        <h2>Student Developer</h2>
+        <h2 class="h2-home">Based in India</h2>
+        <p class="p-home">
+          I'm Namaami Mishra, a passionate Student Developer who enjoys
+          understanding <br />
+          how systems work, from low-level logic circuits to high-level
+          applications.
+        </p>
+      </div>
+      <div class="butn-hom">
+        <button class="btn btn-home1">Contact me</button>
+        <button class="btn btn-home2">My work</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / HI THERE -->
+  <section class="info-section" id="about">
+    <h1 class="section-title" data-aos="fade-up">Hello, There 👋</h1>
+
+    <div class="info-cards">
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
+        <h1>Hi there, I'm Namaami</h1>
+        <p>
+          I have honed my skills in both frontend and backend development,
+          creating dynamic and responsive websites.
+        </p>
+        <img src="images/grid1.png" alt="Developer image" />
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h1>Tech Stack</h1>
+        <p>
+          I specialize in a variety of languages, frameworks, and tools that
+          allow me to build robust and scalable applications.
+        </p>
+        <img src="images/grid2.png" alt="Tech stack image" />
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h1>I’m flexible with time zones &amp; locations</h1>
+        <p>I'm based in India and open to remote work worldwide.</p>
+        <video
+          src="video/glob.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <button><i class="bx bx-send"></i> Contact Me</button>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h1>My Passion for Coding</h1>
+        <p>
+          I love solving problems and building things through code. Programming
+          is my passion.
+        </p>
+        <img src="images/grid4.png" alt="Coding passion" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="my-project" id="projects">
+    <h1 class="section-title" data-aos="fade-up">My Projects 👨‍💻</h1>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="project-vidbox">
+        <video
+          loop
+          muted
+          playsinline
+          src="video/project1.mp4"
+        ></video>
+        <div class="hover-sign"></div>
+      </div>
+      <div class="project-info">
+        <h1>
+          Animated <span class="gradient">Gaming</span> Website
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam
+          excepturi ex corrupti similique dolor nam, suscipit soluta at
+          recusandae nulla.
+        </p>
+        <button><i class="bx bx-link-external"></i> Website</button>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-vidbox">
+        <video
+          loop
+          muted
+          playsinline
+          src="video/project2.mp4"
+        ></video>
+        <div class="hover-sign"></div>
+      </div>
+      <div class="project-info">
+        <h1>
+          Modern <span class="gradient">Portfolio</span> Website
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam modi
+          voluptates assumenda omnis impedit veritatis soluta earum minima
+          consequatur.
+        </p>
+        <button><i class="bx bx-link-external"></i> Website</button>
+      </div>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-vidbox">
+        <video
+          loop
+          muted
+          playsinline
+          src="video/project3.mp4"
+        ></video>
+        <div class="hover-sign"></div>
+      </div>
+      <div class="project-info">
+        <h1>
+          Movie <span class="gradient">Landing</span> Page
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          numquam saepe sapiente odit necessitatibus explicabo hic laudantium
+          ipsam ducimus.
+        </p>
+        <button><i class="bx bx-link-external"></i> Website</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS TITLE -->
+  <section class="skills-title-section">
+    <h1 class="skills-title" data-aos="fade-up">My Skills</h1>
+  </section>
+
+  <!-- DESIGNER VS CODER / TECH STACK -->
+  <section class="designer-coder-section" id="designer-coder">
+    <main class="brain-content-container">
+      <div class="content-col left-col" data-aos="fade-right">
+        <h2 class="gradient-text-designer">
+          Designer <i class="fa-solid fa-desktop"></i>
+        </h2>
+        <p>
+          I have expertise in HTML, CSS, JavaScript, and design tools like
+          Figma and Adobe XD. My strength lies in blending aesthetics with
+          functionality to create seamless user experiences.
+        </p>
+      </div>
+
+      <div class="center-col" data-aos="zoom-in-up">
+        <div class="brain-wrapper">
+          <img
+            class="brain-img"
+            src="images/brain.png"
+            alt="Digital Brain"
+          />
+          <div class="glow-effect"></div>
         </div>
-    </header>
-    
-    <section class="home" id="home">
-        <div class="container-home">
-            <img class="avatar" src="images/img.png" alt="avatar">
-            <div class="text-home">
-                <h4>Hi I'm Namaami!!</h4>
-                <h2>Student Developer</h2>
-                <h2 class="h2-home">Based in India</h2>
-                <p class="p-home">I'm Namaami MIshra, a passionate Student Developer who enjoys understanding <br> how systems work, from low-level logic circuits to high-level applications.</p>
-            </div>
-            <div class="butn-hom">
-                <button class="btn btn-home1">Contact me</button>
-                <button class="btn btn-home2">My work</button>
-            </div>
+      </div>
+
+      <div class="content-col right-col" data-aos="fade-left">
+        <h2 class="gradient-text-coder">
+          Coder <i class="fa-solid fa-code"></i>
+        </h2>
+        <p>
+          I'm skilled in HTML, CSS, JavaScript, and frameworks like React and
+          Node.js. I also have experience with database management using MongoDB
+          and MySQL.
+        </p>
+      </div>
+    </main>
+
+    <div class="tech-dock" data-aos="fade-up">
+      <div id="taskbar-icons">
+        <i class="fa-brands fa-html5 icon" style="color: #e34c26;"></i>
+        <i class="fa-brands fa-css3-alt icon" style="color: #264de4;"></i>
+        <i class="fa-brands fa-js icon" style="color: #f0db4f;"></i>
+        <i class="fa-brands fa-react icon" style="color: #61dbfb;"></i>
+        <i class="fa-brands fa-figma icon" style="color: #F24E1E;"></i>
+        <i class="fa-brands fa-docker icon" style="color: #0db7ed;"></i>
+        <i class="fa-brands fa-github icon" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-node icon" style="color: #68a063;"></i>
+        <i class="fa-brands fa-python icon" style="color: #3776ab;"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up">
+    <div class="footer-container">
+      <h2 class="footer-logo">Namaami</h2>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#designer-coder">Tech Stack</a>
+      </div>
+
+      <div class="footer-socials">
+        <div class="box-icons">
+          <p>
+            <a href="https://www.youtube.com/@yourchannel" target="_blank"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://github.com/Namaami" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/namaami-mishra-619831295/"
+              target="_blank"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+          </p>
         </div>
-    </section>
+      </div>
 
-    <section class="info-section" id="about">
-        <h1 class="section-title">Hello, There 👋</h1>
-        <div class="info-cards">
-            <div class="card">
-                <h1>Hi there, I'm Namaami</h1>
-                <p>I have honed my skills in both frontend and backend development, creating dynamic and responsive websites.</p>
-                <img src="images/grid1.png" alt="">
-            </div>
+      <p class="footer-copy">© 2025 Namaami | All Rights Reserved</p>
+    </div>
+  </footer>
 
-            <div class="card">
-                <h1>Tech Stack</h1>
-                <p>I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications.</p>
-                <img src="images/grid2.png" alt="">
-            </div>
-
-            <div class="card">
-                <h1>I’m flexible with time zones & locations</h1>
-                <p>I'm based in India and open to remote work worldwide.</p>
-                <video src="video/glob.mp4" autoplay loop muted playsinline></video>
-                <button><i class='bx bx-send'></i> Contact Me</button>
-            </div>
-
-            <div class="card">
-                <h1>My Passion for Coding</h1>
-                <p>I love solving problems and building things through code. Programming is my passion.</p>
-                <img src="images/grid4.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="my-project" id="projects">
-        <h1 class="section-title">My Projects 👨‍💻</h1>
-
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video loop muted src="video/project1.mp4"></video>
-                <div class="hover-sign"></div>
-            </div>
-            <div class="project-info">
-                <h1>Animated <span class="gradient">Gaming</span> Website</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsam excepturi ex corrupti similique dolor nam, suscipit soluta at recusandae nulla.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video loop muted src="video/project2.mp4"></video>
-                <div class="hover-sign"></div>
-            </div>
-            <div class="project-info">
-                <h1>Modern <span class="gradient">Portfolio</span> Website</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam modi voluptates assumenda omnis impedit veritatis soluta earum minima consequatur.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-vidbox">
-                <video loop muted src="video/project3.mp4"></video>
-                <div class="hover-sign"></div>
-            </div>
-            <div class="project-info">
-                <h1>Movie <span class="gradient">Landing</span> Page</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores numquam saepe sapiente odit necessitatibus explicabo hic laudantium ipsam ducimus.</p>
-                <button><i class='bx bx-link-external'></i> Website</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-title-section">
-    <h1 class="skills-title">My Skills</h1>
-</section>
-
-
-    <section class="designer-coder-section" id="designer-coder">
-        <main class="brain-content-container">
-            
-            <div class="content-col left-col">
-                <h2 class="gradient-text-designer">
-                    Designer <i class="fa-solid fa-desktop"></i>
-                </h2>
-                <p>
-                    I have expertise in HTML, CSS, JavaScript, and design tools like Figma and Adobe XD. 
-                    My strength lies in blending aesthetics with functionality to create seamless user experiences.
-                </p>
-            </div>
-
-            <div class="center-col">
-                <div class="brain-wrapper">
-                    <img class="brain-img" src="images/brain.png" alt="Digital Brain">
-                    <div class="glow-effect"></div>
-                </div>
-            </div>
-
-            <div class="content-col right-col">
-                <h2 class="gradient-text-coder">
-                    Coder <i class="fa-solid fa-code"></i>
-                </h2>
-                <p>
-                    I'm skilled in HTML, CSS, JavaScript, and frameworks like React and Node.js. 
-                    I also have experience with database management using MongoDB and MySQL.
-                </p>
-            </div>
-        </main>
-
-        <div class="tech-dock">
-            <div id="taskbar-icons">
-                <i class="fa-brands fa-html5 icon" style="color: #e34c26;"></i>
-                <i class="fa-brands fa-css3-alt icon" style="color: #264de4;"></i>
-                <i class="fa-brands fa-js icon" style="color: #f0db4f;"></i>
-                <i class="fa-brands fa-react icon" style="color: #61dbfb;"></i>
-                <i class="fa-brands fa-figma icon" style="color: #F24E1E;"></i>
-                <i class="fa-brands fa-docker icon" style="color: #0db7ed;"></i>
-                <i class="fa-brands fa-github icon" style="color: #ffffff;"></i>
-                <i class="fa-brands fa-node icon" style="color: #68a063;"></i>
-                <i class="fa-brands fa-python icon" style="color: #3776ab;"></i>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <h2 class="footer-logo">Namaami</h2>
-
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#designer-coder">Tech Stack</a>
-            </div>
-
-            <div class="footer-socials">
-                <div class="box-icons">
-                    <p><a href="https://www.youtube.com/@yourchannel" target="_blank"><i class='bx bxl-youtube'></i></a></p>
-                    <p><a href="https://github.com/Namaami" target="_blank"><i class='bx bxl-github'></i></a></p>
-                    <p><a href="https://www.linkedin.com/in/namaami-mishra-619831295/" target="_blank"><i class='bx bxl-linkedin-square'></i></a></p>
-                </div>
-            </div>
-
-            <p class="footer-copy">© 2025 Namaami | All Rights Reserved</p>
-        </div>
-    </footer>
-
-      <!-- GSAP core -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <!-- Optional: ScrollTrigger (used for scroll-based animations) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- Your main script that contains the animation logic -->
+  <!-- AOS + main JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
