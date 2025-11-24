@@ -1,20 +1,59 @@
-*{
+/* =======================================================
+   GLOBAL STYLES 
+   ======================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #000000;
+body {
+    background-color: #02021e; /* Dark Space Blue from new file */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+    position: relative; 
+    min-height: 100vh;
 }
 
-/* ====== HEADER STYLE ====== */
+/* --- Star Background Animation --- */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* =======================================================
+   PORTFOLIO 1 STYLES (Header, Home, About, Projects, Footer)
+   ======================================================= */
+
+/* ====== HEADER STYLE (Renamed .container to .header-container-1) ====== */
 header {
   padding: 15px 0;
 }
 
 .header {
-  background-color: #000000;
+  /* Using the transition logic from original main.js */
+  background-color: rgba(0, 0, 0, 0.8); 
   position: fixed;
   width: 100%;
   height: 80px;
@@ -24,9 +63,10 @@ header {
   z-index: 1000;
   border-bottom: 1px solid #222;
   box-shadow: 0 0 15px #000000a8;
+  transition: background-color 0.3s ease;
 }
 
-.container {
+.header-container-1 {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -105,66 +145,12 @@ header {
   box-shadow: 0 0 15px #007BFF;
 }
 
-/* ====== RESPONSIVE MEDIA QUERIES ====== */
-
-@media (max-width: 992px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  .nav-list {
-    gap: 1rem;
-    padding: 8px 15px;
-  }
-
-  .nav-list a {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-list {
-    display: none; /* Hide menu for small screens */
-  }
-
-  .menu-icon {
-    display: block;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-  }
-
-  .box-icons {
-    gap: 10px;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header {
-    height: 70px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .box-icons p {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-}
-
 
 /* home page */
 
 .home {
     height: 100vh;
-    margin-top: 80px; 
+    margin-top: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +160,6 @@ header {
     width: 200px;
     border-radius: 50%;
     object-fit: cover;
-
 }
 
 .container-home{
@@ -203,8 +188,6 @@ header {
 .h2-home{
     margin-bottom: 30px;
 }
-
-
 
 .p-home{
     font-size: 20px;
@@ -252,8 +235,8 @@ header {
     color: #ffffff;
 }
 
-/* about page  */
 
+/* about page  */
 
 .info-section {
     width: 80%;
@@ -265,12 +248,15 @@ header {
     justify-content: center; 
     text-align: center;
     color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 
 .section-title{
     font-size: 40px;
     font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .info-cards{
@@ -339,10 +325,10 @@ header {
     border: 1px solid #727fdeb4;
     box-shadow: 0 0 5px #727fdeb4;
     cursor: pointer;
-    transition: 0.3s;
     position: absolute;
     bottom: 5%;
     left: 5%;
+    transition: 0.3s;
 }
 
 .card button:hover{
@@ -378,6 +364,8 @@ header {
     bottom: 35%;
 }
 
+/* PROJECTS SECTION */
+
 .my-project{
     width: 80%;
     min-height: 100vh; 
@@ -391,7 +379,7 @@ header {
     position: relative;
     height: 100vh;
     margin-top: 200px;
-    margin-bottom: 700px;
+    margin-bottom: 200px;
     color: white;
 }
 
@@ -517,50 +505,20 @@ header {
     flex-direction: column;
     gap: 20px;
   }
-
-  .nav-list ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .home {
-    flex-direction: column;
-    height: auto;
-    padding: 100px 0;
-  }
-
-  .info-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .project-info {
-    width: 100%;
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .project-vidbox {
-    width: 100%;
-  }
 }
 
-
+/* FOOTER */
 footer {
-  margin-top: -300px;
+  margin-top: 50px; 
   background: #000;
   color: #fff;
-  padding: 50px 20px;
+  padding: 10px 10px;
   text-align: center;
   border-top: 1px solid #111;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -570,7 +528,6 @@ footer {
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
 .footer-links {
@@ -632,16 +589,261 @@ footer {
   margin-top: 15px;
 }
 
-/* ===== Animation ===== */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px);}
-  100% { opacity: 1; transform: translateY(0);}
+
+/* =======================================================
+   DESIGNER VS CODER STYLES (NEW SECTION)
+   ======================================================= */
+
+.designer-coder-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Crucial: Establishes context for tech-dock absolute positioning */
+    padding-top: 30px;
+    padding-bottom: 100px; /* Space for the tech dock at the bottom */
+    background-color: #02021e; /* Same as body */
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 600px) {
-  .footer-links {
+/* --- Main Layout (Renamed from .container to .brain-content-container) --- */
+.brain-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    z-index: 1;
+    flex-grow: 1; 
+}
+
+.content-col {
+    flex: 1;
+    padding: 20px;
+}
+
+/* --- Text Styling --- */
+/* Overrides for h2/p applied to only this section for safety */
+.designer-coder-section h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.designer-coder-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #b0b0c0;
+    max-width: 350px;
+}
+
+/* Designer Side (Left) */
+.designer-coder-section .left-col {
+    text-align: left; 
+}
+
+.gradient-text-designer {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Coder Side (Right) */
+.designer-coder-section .right-col {
+    text-align: right;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
+    align-items: flex-end;
+}
+
+.gradient-text-coder {
+    background: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Brain Image Area --- */
+.center-col {
+    flex: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.brain-wrapper {
+    position: center;
+    width: 450px; 
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brain-img {
+    width: 650px; 
+    max-width: 500%; 
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(0, 150, 255, 0.4));
+    z-index: 2;
+    animation: floatBrain 6s ease-in-out infinite;
+    margin-top: 310px; /* Reset margin top */
+}
+
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(0, 100, 255, 0.4) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+}
+
+/* --- Bottom Icons (FIXED SCROLL EFFECT) --- */
+.tech-dock {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100px; /* Fixed height for the dock area */
+    background: linear-gradient(to top, rgba(2, 2, 30, 1), transparent); 
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Hides the icons when they move off screen */
+    
+    /* Optional: Fades the left and right edges so icons don't pop in/out abruptly */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+#taskbar-icons {
+    display: flex;
+    align-items: center;
+    width: fit-content; /* JS will override this, but good default */
+    
+    /* The Animation */
+    /* Uses the variable calculated by JS. 20s is the speed. */
+    animation: scrollHorizontal 20s linear infinite;
+}
+
+
+.icon {
+    font-size: 4.5rem;
+    margin: 0 15px; 
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+    transition: transform 0.3s ease;
+    flex-shrink: 0; 
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 15px rgba(45, 122, 223, 0.8));
+    color: white !important; 
+}
+
+/* The Animation Logic */
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move left by exactly the width of one set of icons */
+        transform: translateX(calc(-1 * var(--original-set-width)));
+    }
+}
+
+@keyframes floatBrain {
+    0%, 100% {
+        /* Assuming your float moves it up/down, add scale() here */
+        transform: translateY(0) scale(1.5); 
+    }
+    50% {
+        transform: translateY(-20px) scale(1.5);
+    }
+}
+
+
+/* --- Responsive (General) --- */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-col {
+        align-items: center;
+        text-align: center;
+    }
+
+    .brain-wrapper {
+        width: 300px;
+        height: 300px;
+        margin: 30px 0;
+    }
+}
+
+/* Performance hints */
+* { will-change: transform, opacity; }
+img, video { backface-visibility: hidden; transform: translateZ(0); }
+
+/* Soft glow element (we animate opacity/scale with GSAP) */
+.glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 30%,
+               rgba(138, 43, 255, 0.28) 0%,
+               rgba(76, 0, 255, 0.14) 30%,
+               rgba(0,0,0,0) 60%);
+    filter: blur(24px);
+    opacity: 0.85;
+}
+
+/* Slightly nicer default transitions on interactive elements */
+.btn, .icon, .project-vidbox video {
+    transition: transform 0.35s cubic-bezier(.17,.89,.32,1.28),
+                box-shadow 0.35s, opacity 0.35s;
+}
+
+/* Project video hover target — we will animate with GSAP for extra polish */
+.project-vidbox {
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* micro-floating helper class for icons in .icon */
+.icon.float {
+    transform-origin: center;
+}
+
+/* subtle backdrop on sections so stars show through but content remains readable */
+.designer-coder-section {
+    background-color: rgba(2,2,30,0.96);
+}
+
+.skills-title-section {
+    width: 100%;
+    text-align: center;
+    padding: 110px 0 5px 0;
+}
+
+.skills-title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
