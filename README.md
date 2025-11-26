@@ -11,7 +11,7 @@ It is fully **responsive**, interactive, and designed to highlight your projects
 
 ## 🚀 Live Demo
 
-You can view the live, [deployed version of this project here:](https//:namaami.github.io/Portfolio-2)
+You can view the live, [deployed version of this project here:](https://namaami.github.io/Portfolio-2/)
 
 ## 🌟 Features
 
